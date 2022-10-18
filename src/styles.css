@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+.container{
+    padding-top: 10px;
+}
+
+.hoverwell:hover{
+    background-color: #4235f7;
+    cursor: pointer;
+}

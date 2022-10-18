@@ -1,0 +1,16 @@
+<div>
+    <h1>Technologies event in India</h1>
+    <hr />
+
+    <div *ngFor="let event of events" class="col-md-5">
+        <events-thumbnail #thumbnail [event]="event" 
+        
+        ></events-thumbnail>
+    
+    
+    <!-- <h3>{{thumbnail.childProperty}}</h3>
+    <button class="btn btn-primary" (click)="thumbnail.logMessage()">Log message</button> -->
+</div>
+</div>
+
+<!-- (eventClick)="handleEventClicked($event)" -->
