@@ -1,3 +1,4 @@
+import { IEvent } from './shared/event.model';
 import { ActivatedRoute } from '@angular/router';
 import { Component} from "@angular/core";
 import { EventService } from "./shared/event.service";
@@ -20,7 +21,7 @@ export class EventsListComponent{
             country:"India"
         }
     }
-    events:any;
+    events: IEvent[];
 
     constructor(private eventService:EventService , private route: ActivatedRoute)   {} 
 

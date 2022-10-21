@@ -1,12 +1,13 @@
+import { IEvent } from './event.model';
 import { Injectable } from "@angular/core";
-import {Subject} from 'rxjs'
+import {Observable, Subject} from 'rxjs'
 
 
 @Injectable()
 export class EventService{
-    getEvents(){
+    getEvents():Observable<IEvent[]>{
         // return EVENTS;
-        let subject = new Subject()
+        let subject = new Subject<IEvent[]>()
         setTimeout(() => {subject.next(EVENTS);subject.complete();},100)
         return subject
     }
@@ -16,11 +17,11 @@ export class EventService{
     }
 }
 
-const EVENTS = [
+const EVENTS:IEvent[] = [
     {
         id:1,
         name:'Pharma tech expo(PTE)',
-        date:"10/15/2022",
+        date: new Date("10/15/2022"),
         time:"09:00 am",
         price: 5000,
         onLineUrl:"https://2020.agileindia.org",   
@@ -33,7 +34,7 @@ const EVENTS = [
     {
         id:2,
         name:'Jio tech group(JTG)',
-        date:"10/15/2022",
+        date:new Date("10/15/2022"),
         time:"10:00 am",
         price: 6000,
         onLineUrl:"https://2020.agileindia.org",
@@ -46,7 +47,7 @@ const EVENTS = [
     {
         id:3,
         name:'Mac groups(MG)',
-        date:"10/15/2022",
+        date: new Date("10/15/2022"),
         time:"11:00 am",
         price: 10000,
         location:{
@@ -58,7 +59,7 @@ const EVENTS = [
     {
         id:4,
         name:'Windo groups(WG)',
-        date:"10/15/2022",
+        date: new Date("10/15/2022"),
         time:"12:00 pm",
         price: 10000,
         location:{
@@ -70,7 +71,7 @@ const EVENTS = [
     {
         id:5,
         name:'Linux distributions(LD)',
-        date:"10/15/2022",
+        date: new Date("10/15/2022"),
         time:"13:00 pm",
         price: 9000,
         location:{

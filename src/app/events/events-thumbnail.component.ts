@@ -1,3 +1,4 @@
+import { IEvent } from './shared/event.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, EventEmitter, Input, Output } from "@angular/core";
 
@@ -13,7 +14,7 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
   })
 
 export class EventthumbnailComponent{
-    @Input() event : any
+    @Input() event : IEvent
     // @Output() eventClick = new EventEmitter()
     // handleClick(){
     //     this.eventClick.emit(this.event.date)
